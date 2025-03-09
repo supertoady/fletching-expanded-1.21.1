@@ -1,0 +1,62 @@
+{
+  "entity.homing_arrow.target": {
+    "sounds": [
+      {
+        "name": "entity/endereye/dead1",
+        "volume": 1.5
+      },
+      {
+        "name": "entity/endereye/dead2",
+        "volume": 1.5
+      }
+    ],
+    "subtitle": "subtitles.fletching-expanded.homing_arrow.target"
+  },
+  "entity.echo_arrow.hit": {
+    "sounds": [
+      {
+        "name": "mob/warden/sonic_boom1",
+        "pitch": 1.2
+      },
+      {
+        "name": "mob/warden/sonic_boom2",
+        "pitch": 1.2
+      },
+      {
+        "name": "mob/warden/sonic_boom3",
+        "pitch": 1.2
+      },
+      {
+        "name": "mob/warden/sonic_boom4",
+        "pitch": 1.2
+      }
+    ],
+    "subtitle": "subtitles.fletching-expanded.echo_arrow.hit"
+  },
+  "entity.slime_arrow.hit": {
+    "sounds": [
+      "mob/slime/small1",
+      "mob/slime/small2",
+      "mob/slime/small3",
+      "mob/slime/small4",
+      "mob/slime/small5"
+    ],
+    "subtitle": "subtitles.fletching-expanded.slime_arrow.hit"
+  },
+  "block.fletching_table.potion_craft": {
+    "sounds": [
+      "block/brewing_stand/brew1",
+      "block/brewing_stand/brew2"
+    ],
+    "subtitle": "subtitles.fletching-expanded.fletching_table_potion"
+  },
+  "enchant.overcharged.full_charge": {
+    "sounds": [
+      {
+        "name": "fletching-expanded:bow_enchanted_charge",
+        "pitch": 0.8
+      }
+    ],
+    "subtitle": "subtitles.fletching-expanded.bow_enchanted_charge"
+  }
+}

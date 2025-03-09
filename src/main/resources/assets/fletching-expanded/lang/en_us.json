@@ -1,0 +1,37 @@
+{
+  "enchantment.fletching-expanded.explosive": "Explosive",
+  "enchantment.fletching-expanded.streak": "Streak",
+
+  "enchantment.fletching-expanded.streak.desc": "Repeatedly shooting mobs gives you a ranged damage and speed boost. Stacks twice.",
+  "enchantment.fletching-expanded.explosive.desc": "Arrows shot will explode.",
+
+  "effect.fletching-expanded.streak": "Streak",
+
+  "item.fletching-expanded.quiver": "Quiver",
+  "item.fletching-expanded.arrow_shaft": "Arrow Shaft",
+  "item.fletching-expanded.iron_arrow": "Iron Arrow",
+  "item.fletching-expanded.frost_arrow": "Frost Arrow",
+  "item.fletching-expanded.flame_arrow": "Flame Arrow",
+  "item.fletching-expanded.amethyst_arrow": "Amethyst Arrow",
+  "item.fletching-expanded.echo_arrow": "Echo Arrow",
+  "item.fletching-expanded.slime_arrow": "Slime Arrow",
+  "item.fletching-expanded.phantom_arrow": "Phantom Arrow",
+  "item.fletching-expanded.homing_arrow": "Homing Arrow",
+
+  "entity.fletching-expanded.iron_arrow": "Iron Arrow",
+  "entity.fletching-expanded.amethyst_arrow": "Amethyst Arrow",
+  "entity.fletching-expanded.echo_arrow": "Echo Arrow",
+  "entity.fletching-expanded.slime_arrow": "Slime Arrow",
+  "entity.fletching-expanded.phantom_arrow": "Phantom Arrow",
+  "entity.fletching-expanded.homing_arrow": "Homing Arrow",
+
+  "container.fletching": "Fletching",
+
+  "subtitles.fletching-expanded.slime_arrow.hit": "Slime arrow bounces",
+  "subtitles.fletching-expanded.echo_arrow.hit": "Echo arrow explodes",
+  "subtitles.fletching-expanded.homing_arrow.target": "Homing arrow locks onto target",
+  "subtitles.fletching-expanded.fletching_table_potion": "Fletching Table brews",
+  "subtitles.fletching-expanded.bow_enchanted_charge": "Bow fully charges",
+
+  "tooltip.fletching-expanded.quiver1": ""
+}

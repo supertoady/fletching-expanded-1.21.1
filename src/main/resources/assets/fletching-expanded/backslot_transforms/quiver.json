@@ -1,0 +1,8 @@
+{
+  "item": "fletching-expanded:quiver",
+  "scale": [0.9, 0.9, 0.9],
+  "rotation": [0.0, 0.0, 180.0],
+  "translation": [0.0, -0.1, 0.0],
+  "mode": "FIXED",
+  "sway": 0.4
+}

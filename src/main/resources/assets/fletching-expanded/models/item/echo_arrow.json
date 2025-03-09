@@ -1,0 +1,6 @@
+{
+  "parent": "fletching-expanded:item/arrow_base",
+  "textures": {
+    "layer0": "fletching-expanded:item/echo_arrow"
+  }
+}

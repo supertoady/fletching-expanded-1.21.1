@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " #c",
+    "#LL",
+    "LL "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:string"
+    },
+    "c": {
+      "item": "minecraft:copper_ingot"
+    },
+    "L": {
+      "item": "minecraft:leather"
+    }
+  },
+  "result": {
+    "id": "fletching-expanded:quiver",
+    "count": 1
+  }
+}

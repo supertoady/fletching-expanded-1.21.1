@@ -1,0 +1,25 @@
+{
+  "required": true,
+  "package": "toady.fletching.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BowItemMixin",
+    "FletchingTableBlockMixin",
+    "PersistentProjectileEntityMixin",
+    "StrayEntityMixin",
+    "TippedArrowRecipeMixin",
+    "enchant.EnchantBookFactoryMixin",
+    "enchant.EnchantmentHelperMixin",
+    "enchant.EnchantmentMixin",
+    "enchant.ItemGroupMixin",
+    "quiver.PlayerEntityMixin",
+    "quiver.PersistentProjectileEntityMixin",
+    "quiver.RangedWeaponItemMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "ArrowEntityRendererMixin"
+  ]
+}

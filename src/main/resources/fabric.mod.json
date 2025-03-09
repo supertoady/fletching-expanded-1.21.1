@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "fletching-expanded",
+	"version": "${version}",
+	"name": "Fletching Expanded",
+	"description": "A full fletching revamp, adding a use for the fletching table, new arrow types, new ranged enchants, and more!",
+	"authors": [
+		"supertoady",
+		"Zarkanaseen",
+		"8hiny"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "ARR",
+	"icon": "assets/fletching-expanded/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"toady.fletching.FletchingExpanded"
+		],
+		"fabric-datagen": [
+			"toady.fletching.FletchingExpandedDataGenerator"
+		],
+		"client": [
+			"toady.fletching.FletchingExpandedClient"
+		]
+	},
+	"mixins": [
+		"fletching-expanded.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"anothermod": "*"
+	}
+}

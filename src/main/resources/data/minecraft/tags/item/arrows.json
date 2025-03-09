@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "fletching-expanded:flame_arrow",
+    "fletching-expanded:frost_arrow",
+    "fletching-expanded:iron_arrow",
+    "fletching-expanded:slime_arrow",
+    "fletching-expanded:amethyst_arrow",
+    "fletching-expanded:echo_arrow",
+    "fletching-expanded:phantom_arrow",
+    "fletching-expanded:homing_arrow"
+  ]
+}
