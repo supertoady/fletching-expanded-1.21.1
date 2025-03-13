@@ -30,7 +30,8 @@
   "subtitles.fletching-expanded.slime_arrow.hit": "Slime arrow bounces",
   "subtitles.fletching-expanded.echo_arrow.hit": "Echo arrow explodes",
   "subtitles.fletching-expanded.homing_arrow.target": "Homing arrow locks onto target",
-  "subtitles.fletching-expanded.fletching_table_potion": "Fletching Table brews",
+  "subtitles.fletching-expanded.fletching_table_potion": "Fletching Table crafts Tipped Arrows",
+  "subtitles.fletching-expanded.fletching_table_craft": "Fletching Table crafts arrows",
   "subtitles.fletching-expanded.bow_enchanted_charge": "Bow fully charges",
 
   "tooltip.fletching-expanded.quiver1": ""

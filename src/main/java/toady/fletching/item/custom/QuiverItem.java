@@ -160,10 +160,12 @@ public class QuiverItem extends Item {
         ItemStack returnStack = mainStack.copyWithCount(1);
 
         if (mainStack.isOf(secondaryStack.getItem())) {
-            secondaryStack.decrement(1);
+            if (secondaryStack.getCount() == 1) secondaryStack = ItemStack.EMPTY;
+            else secondaryStack.decrement(1);
             quiver.set(ModComponents.QUIVER_SECONDARY_STACK, secondaryStack);
         } else {
-            mainStack.decrement(1);
+            if (mainStack.getCount() == 1) mainStack = ItemStack.EMPTY;
+            else mainStack.decrement(1);
             quiver.set(ModComponents.QUIVER_MAIN_STACK, mainStack);
             if (mainStack.isEmpty() && !getSecondaryStack(quiver).isEmpty()) {
                 quiver.set(ModComponents.QUIVER_MAIN_STACK, getSecondaryStack(quiver));

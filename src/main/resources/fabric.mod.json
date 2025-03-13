@@ -10,8 +10,8 @@
 		"8hiny"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"modrinth": "https://modrinth.com/mod/fletching-expanded",
+		"sources": "https://github.com/supertoady/fletching-expanded-1.21.1"
 	},
 	"license": "ARR",
 	"icon": "assets/fletching-expanded/icon.png",
@@ -36,7 +36,11 @@
 		"java": ">=21",
 		"fabric-api": "*"
 	},
-	"suggests": {
-		"anothermod": "*"
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.modrinth": "https://modrinth.com/mod/fletching-expanded"
+			}
+		}
 	}
 }

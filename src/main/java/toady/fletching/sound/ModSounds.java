@@ -12,6 +12,7 @@ public class ModSounds {
     public static RegistryEntry.Reference<SoundEvent> ENTITY_ECHO_ARROW_HIT = registerReference("entity.echo_arrow.hit");
     public static SoundEvent ENTITY_SLIME_ARROW_HIT = registerSound("entity.slime_arrow.hit");
     public static SoundEvent BLOCK_FLETCHING_TABLE_POTION_CRAFT = registerSound("block.fletching_table.potion_craft");
+    public static SoundEvent BLOCK_FLETCHING_TABLE_CRAFT = registerSound("block.fletching_table.craft");
     //public static SoundEvent ENCHANT_OVERCHARGED_FULL_CHARGE = registerSound("enchant.overcharged.full_charge");
 
     private static SoundEvent registerSound(String name){

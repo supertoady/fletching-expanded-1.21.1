@@ -50,13 +50,11 @@
     ],
     "subtitle": "subtitles.fletching-expanded.fletching_table_potion"
   },
-  "enchant.overcharged.full_charge": {
+  "block.fletching_table.craft": {
     "sounds": [
-      {
-        "name": "fletching-expanded:bow_enchanted_charge",
-        "pitch": 0.8
-      }
+      "block/fletching_table/fletching_table1",
+      "block/fletching_table/fletching_table2"
     ],
-    "subtitle": "subtitles.fletching-expanded.bow_enchanted_charge"
+    "subtitle": "subtitles.fletching-expanded.fletching_table_craft"
   }
 }

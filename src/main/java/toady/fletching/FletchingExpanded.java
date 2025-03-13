@@ -124,9 +124,8 @@ public class FletchingExpanded implements ModInitializer {
 		TradeOfferHelper.registerVillagerOffers(VillagerProfession.FLETCHER, 2, factories -> {
 			ItemStack quiver = new ItemStack(ModItems.QUIVER);
 			int count = new Random().nextInt(16, 40);
-			Item arrow = new Random().nextInt() == 1 ? Items.ARROW : ModItems.IRON_ARROW;
-			quiver.set(ModComponents.QUIVER_MAIN_STACK, new ItemStack(arrow, 64));
-			quiver.set(ModComponents.QUIVER_SECONDARY_STACK, new ItemStack(arrow, count));
+			quiver.set(ModComponents.QUIVER_MAIN_STACK, new ItemStack(Items.ARROW, 64));
+			quiver.set(ModComponents.QUIVER_SECONDARY_STACK, new ItemStack(Items.ARROW, count));
 
 			factories.add((entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, 12),
