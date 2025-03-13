@@ -100,7 +100,7 @@ public class FletchingScreenHandler extends ScreenHandler {
             player.playSoundToPlayer(ModSounds.BLOCK_FLETCHING_TABLE_POTION_CRAFT, SoundCategory.BLOCKS, 1, 1);
         }
         else {
-            player.playSoundToPlayer(ModSounds.BLOCK_FLETCHING_TABLE_CRAFT, SoundCategory.BLOCKS, 1, 1);
+            player.playSoundToPlayer(ModSounds.BLOCK_FLETCHING_TABLE_CRAFT, SoundCategory.BLOCKS, 0.4f, 1);
         }
         input.getStack(0).decrement(8);
         input.getStack(1).decrement(1);
