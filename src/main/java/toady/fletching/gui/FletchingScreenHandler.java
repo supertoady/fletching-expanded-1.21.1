@@ -179,6 +179,9 @@ public class FletchingScreenHandler extends ScreenHandler {
                 if (!player.getWorld().isClient && input.getStack(1).isOf(Items.POTION)){
                     player.playSoundToPlayer(ModSounds.BLOCK_FLETCHING_TABLE_POTION_CRAFT, SoundCategory.BLOCKS, 1, 1);
                 }
+                else {
+                    player.playSoundToPlayer(ModSounds.BLOCK_FLETCHING_TABLE_CRAFT, SoundCategory.BLOCKS, 0.4f, 1);
+                }
 
                 ItemStack shaft = input.getStack(0);
                 ItemStack tip = input.getStack(1);
