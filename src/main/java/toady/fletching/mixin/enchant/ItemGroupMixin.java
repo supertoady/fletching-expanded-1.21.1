@@ -5,6 +5,7 @@ import net.minecraft.enchantment.EnchantmentLevelEntry;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.item.EnchantedBookItem;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemGroups;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.RegistryWrapper;
 import org.spongepowered.asm.mixin.Mixin;
@@ -16,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.List;
 import java.util.stream.IntStream;
 
-@Mixin(targets = "net.minecraft.item.ItemGroups")
+@Mixin(ItemGroups.class)
 public abstract class ItemGroupMixin {
 
     @Inject(method = "addMaxLevelEnchantedBooks", at = @At("HEAD"), cancellable = true)
