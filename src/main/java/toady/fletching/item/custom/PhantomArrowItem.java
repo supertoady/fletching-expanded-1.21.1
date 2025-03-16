@@ -1,11 +1,8 @@
 package toady.fletching.item.custom;
 
-import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
-import net.minecraft.entity.projectile.SpectralArrowEntity;
 import net.minecraft.item.ArrowItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -15,7 +12,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Position;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-import toady.fletching.entity.ModEntityType;
+import toady.fletching.FletchingExpanded;
 import toady.fletching.entity.custom.PhantomArrowEntity;
 
 import java.util.List;
@@ -39,7 +36,7 @@ public class PhantomArrowItem extends ArrowItem {
 
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-        if (Screen.hasShiftDown()){
+        if (FletchingExpanded.hasShiftDown()){
             tooltip.add(Text.literal("§8Has no gravity. Will vanish in the air"));
             tooltip.add(Text.literal("§8after a certain amount of time."));
         }

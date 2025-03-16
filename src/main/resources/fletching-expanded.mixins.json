@@ -6,14 +6,15 @@
     "BowItemMixin",
     "FletchingTableBlockMixin",
     "PersistentProjectileEntityMixin",
+    "SpectralArrowItemMixin",
     "StrayEntityMixin",
     "TippedArrowRecipeMixin",
     "enchant.EnchantBookFactoryMixin",
     "enchant.EnchantmentHelperMixin",
     "enchant.EnchantmentMixin",
     "enchant.ItemGroupMixin",
-    "quiver.PlayerEntityMixin",
     "quiver.PersistentProjectileEntityMixin",
+    "quiver.PlayerEntityMixin",
     "quiver.RangedWeaponItemMixin"
   ],
   "injectors": {

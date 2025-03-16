@@ -1,7 +1,5 @@
 package toady.fletching.item.custom;
 
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
@@ -16,7 +14,6 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import toady.fletching.FletchingExpanded;
 import toady.fletching.entity.custom.AmethystArrowEntity;
-import toady.fletching.entity.custom.PhantomArrowEntity;
 
 import java.util.List;
 
@@ -39,7 +36,7 @@ public class AmethystArrowItem extends ArrowItem {
 
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-        if (Screen.hasShiftDown()){
+        if (FletchingExpanded.hasShiftDown()){
             tooltip.add(Text.literal("§8Shatters on impact. Deals a base amount"));
             tooltip.add(Text.literal("§8of AOE damage to other nearby entities."));
         }

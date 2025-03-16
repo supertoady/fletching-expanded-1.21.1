@@ -1,13 +1,9 @@
 package toady.fletching.item.custom;
 
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.StackReference;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.screen.slot.Slot;
@@ -81,7 +77,7 @@ public class QuiverItem extends Item {
             tooltip.add(Text.literal(" "));
         }
 
-        if (Screen.hasShiftDown()){
+        if (FletchingExpanded.hasShiftDown()){
             tooltip.add(Text.literal("§8Allows you to store two stacks of any arrow type."));
             tooltip.add(Text.literal("§8Automatically picks up arrows and inserts them into"));
             tooltip.add(Text.literal("§8the quiver."));
@@ -154,7 +150,7 @@ public class QuiverItem extends Item {
         }
     }
 
-    public static ItemStack removeNextProjectile(LivingEntity shooter, ItemStack quiver){
+    public static ItemStack removeNextProjectile(ItemStack quiver){
         ItemStack mainStack = getMainStack(quiver);
         ItemStack secondaryStack = getSecondaryStack(quiver);
         ItemStack returnStack = mainStack.copyWithCount(1);

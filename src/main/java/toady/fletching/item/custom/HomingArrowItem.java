@@ -1,6 +1,5 @@
 package toady.fletching.item.custom;
 
-import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
@@ -13,7 +12,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Position;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-import toady.fletching.entity.custom.EchoArrowEntity;
+import toady.fletching.FletchingExpanded;
 import toady.fletching.entity.custom.HomingArrowEntity;
 
 import java.util.List;
@@ -37,7 +36,7 @@ public class HomingArrowItem extends ArrowItem {
 
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-        if (Screen.hasShiftDown()){
+        if (FletchingExpanded.hasShiftDown()){
             tooltip.add(Text.literal("§8Homes in on nearby entities. Very useful"));
             tooltip.add(Text.literal("§8for long distance aiming."));
         }

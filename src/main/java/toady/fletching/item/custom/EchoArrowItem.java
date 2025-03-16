@@ -1,6 +1,7 @@
 package toady.fletching.item.custom;
 
-import net.minecraft.client.gui.screen.Screen;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
@@ -13,6 +14,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Position;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+import toady.fletching.FletchingExpanded;
 import toady.fletching.entity.custom.EchoArrowEntity;
 
 import java.util.List;
@@ -36,13 +38,15 @@ public class EchoArrowItem extends ArrowItem {
 
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-        if (Screen.hasShiftDown()){
-            tooltip.add(Text.literal("§8Creates a warden explosion on impact."));
-            tooltip.add(Text.literal("§8The explosion deals no damage but has"));
-            tooltip.add(Text.literal("§8massive knockback."));
-        }
-        else {
-            tooltip.add(Text.literal("§8Press [§7Sneak§8] for Summary"));
+        if (FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT) {
+            if (FletchingExpanded.hasShiftDown()){
+                tooltip.add(Text.literal("§8Creates a warden explosion on impact."));
+                tooltip.add(Text.literal("§8The explosion deals no damage but has"));
+                tooltip.add(Text.literal("§8massive knockback."));
+            }
+            else {
+                tooltip.add(Text.literal("§8Press [§7Sneak§8] for Summary"));
+            }
         }
         super.appendTooltip(stack, context, tooltip, type);
     }

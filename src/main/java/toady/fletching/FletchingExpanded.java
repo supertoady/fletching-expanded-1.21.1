@@ -1,5 +1,6 @@
 package toady.fletching;
 
+import net.fabricmc.api.EnvType;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.gamerule.v1.GameRuleFactory;
@@ -7,7 +8,8 @@ import net.fabricmc.fabric.api.gamerule.v1.GameRuleRegistry;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
-import net.minecraft.item.Item;
+import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -32,7 +34,6 @@ import toady.fletching.entity.ModEntityType;
 import toady.fletching.gui.FletchingScreenHandler;
 import toady.fletching.item.ModItems;
 import toady.fletching.item.ModComponents;
-import toady.fletching.item.custom.QuiverItem;
 import toady.fletching.network.UpdateQuiverComponentsPayload;
 import toady.fletching.sound.ModSounds;
 
@@ -79,9 +80,7 @@ public class FletchingExpanded implements ModInitializer {
 			content.add(ModItems.HOMING_ARROW);
 			content.add(ModItems.QUIVER);
 		});
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content -> {
-			content.add(ModItems.ARROW_SHAFT);
-		});
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content -> content.add(ModItems.ARROW_SHAFT));
 
 		//register packets
 		PayloadTypeRegistry.playS2C().register(UpdateQuiverComponentsPayload.ID, UpdateQuiverComponentsPayload.CODEC);
@@ -100,6 +99,15 @@ public class FletchingExpanded implements ModInitializer {
 		LOGGER.info("Fletching Expanded loaded!");
 	}
 
+	public static boolean hasShiftDown(){
+		if (FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT){
+			return Screen.hasShiftDown();
+		}
+		else {
+			return false;
+		}
+	}
+
 	//random util methods
 	public static void showParticlesToAll(World world, ParticleEffect particle, Vec3d pos, double delta, int count, double speed){
 		if (world.getServer() == null) return;
@@ -114,12 +122,11 @@ public class FletchingExpanded implements ModInitializer {
 	}
 
 	public void registerVillagerTrades(){
-		TradeOfferHelper.registerVillagerOffers(VillagerProfession.FLETCHER, 1, factories -> {
-			factories.add((entity, random) -> new TradeOffer(
-					new TradedItem(Items.EMERALD, 3),
-					new ItemStack(ModItems.ARROW_SHAFT, 64), 12, 1, 0.05f
-			));
-		});
+		TradeOfferHelper.registerVillagerOffers(VillagerProfession.FLETCHER, 1, factories ->
+				factories.add((entity, random) -> new TradeOffer(
+                new TradedItem(Items.EMERALD, 3),
+                new ItemStack(ModItems.ARROW_SHAFT, 64), 12, 1, 0.05f
+        )));
 
 		TradeOfferHelper.registerVillagerOffers(VillagerProfession.FLETCHER, 2, factories -> {
 			ItemStack quiver = new ItemStack(ModItems.QUIVER);
@@ -166,12 +173,11 @@ public class FletchingExpanded implements ModInitializer {
 			));
 		});
 
-		TradeOfferHelper.registerVillagerOffers(VillagerProfession.FLETCHER, 5, factories -> {
-			factories.add((entity, random) -> new TradeOffer(
-					new TradedItem(ModItems.ARROW_SHAFT, 16),
-					Optional.of(new TradedItem(Items.EMERALD, 3)),
-					new ItemStack(ModItems.AMETHYST_ARROW, 16), 8, 2, 0.05f
-			));
-		});
+		TradeOfferHelper.registerVillagerOffers(VillagerProfession.FLETCHER, 5, factories ->
+				factories.add((entity, random) -> new TradeOffer(
+                new TradedItem(ModItems.ARROW_SHAFT, 16),
+                Optional.of(new TradedItem(Items.EMERALD, 3)),
+                new ItemStack(ModItems.AMETHYST_ARROW, 16), 8, 2, 0.05f
+        )));
 	}
 }

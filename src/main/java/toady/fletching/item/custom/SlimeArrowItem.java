@@ -1,7 +1,5 @@
 package toady.fletching.item.custom;
 
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
@@ -38,7 +36,7 @@ public class SlimeArrowItem extends ArrowItem {
 
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-        if (Screen.hasShiftDown()){
+        if (FletchingExpanded.hasShiftDown()){
             tooltip.add(Text.literal("§8Bounces off blocks, retaining most momentum."));
         }
         else {

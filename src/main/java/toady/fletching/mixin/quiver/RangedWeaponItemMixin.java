@@ -5,7 +5,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.RangedWeaponItem;
 import net.minecraft.registry.tag.ItemTags;
-import net.minecraft.text.Text;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -23,7 +22,7 @@ public class RangedWeaponItemMixin {
                 ItemStack inventoryStack = player.getInventory().getStack(i);
                 if (inventoryStack.isOf(ModItems.QUIVER)) {
                     if (!QuiverItem.getMainStack(inventoryStack).isEmpty()){
-                        cir.setReturnValue(QuiverItem.removeNextProjectile(shooter, inventoryStack));
+                        cir.setReturnValue(QuiverItem.removeNextProjectile(inventoryStack));
                     }
                 }
             }
